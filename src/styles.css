@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+}
+
+.container {
+  padding: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 5px;
+  width: 80px;
+}
+
+button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.floor {
+  margin-bottom: 15px;
+}
+
+.rooms {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.room {
+  padding: 8px;
+  border-radius: 4px;
+  width: 60px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.available {
+  background: #c8e6c9;
+}
+
+.booked {
+  background: #ef9a9a;
+}
+
+.occupied {
+  background: #bdbdbd;
+}
