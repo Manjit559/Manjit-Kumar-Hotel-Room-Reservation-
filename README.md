@@ -1,16 +1,62 @@
-# React + Vite
+# Hotel Room Reservation System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✅ Project Overview
+This is a Hotel Room Reservation System built using **React**.  
+The application simulates booking rooms in a 10-floor hotel (97 rooms total) and optimally assigns rooms based on minimizing travel time.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏨 Hotel Structure
+- Floors **1 to 9** have **10 rooms each** (e.g., 101–110, 201–210, ...).
+- Floor **10** has **7 rooms** (1001–1007).
+- Rooms are arranged from **left to right**, with room number increasing.
+- Stairs/Lift are located on the **left side**, so room 101 is closest.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⏱️ Travel Time Rules
+- **Horizontal travel:** 1 minute per room.
+- **Vertical travel:** 2 minutes per floor.
 
-## Expanding the ESLint configuration
+Example:
+- Moving from room **101 to 104** takes **3 minutes**.
+- Moving from floor **1 to floor 3** takes **4 minutes**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Booking Rules
+- A guest can book **1 to 5 rooms** at a time.
+- Priority is to book rooms **on the same floor** first.
+- If not enough rooms are available on one floor, the system books rooms across floors with **minimum travel time**.
+
+---
+
+## ⚙️ Features
+- Enter number of rooms (1–5) and book them.
+- Visual representation of rooms by floor.
+- Button to generate random room occupancy.
+- Button to reset all bookings.
+
+---
+
+## 🧠 Booking Logic
+1. Collect all available rooms.
+2. Check combinations of requested rooms.
+3. Calculate travel time for each combination.
+4. Select the combination with the **minimum travel time**.
+5. Book the selected rooms.
+
+---
+
+## 🧰 Tech Stack
+- React
+- JavaScript
+- CSS
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Manjit559/Manjit-Kumar-Hotel-Room-Reservation-.git
